@@ -6,6 +6,8 @@
 
 describe('Stickerfy automation process', () => {
 
+    var TIME = 10000
+
     beforeEach(() => {
         cy.visit('https://stickerfy.herokuapp.com/')
     })
@@ -14,7 +16,19 @@ describe('Stickerfy automation process', () => {
         cy.title().should('be.equal', 'Stickerfy')
     })
 
+    it('clicar no botão "Add to cart" no sticker Happy', () => {
+
+        //cy.contains('a:contains(Add to cart)').should('be.visible')
+
+        cy.clock()
+
+        cy.get('a[href*="/add-to-cart/5dd8e2b26c26d0000a675cf9"').click()
+        cy.tick(TIME)
+        cy.get('a[href*="/add-to-cart/5dd8e2b26c26d0000a675cfa"').click()
+        cy.tick(TIME)
+        cy.get('a[href*="/add-to-cart/5dd8e2b26c26d0000a675cfb"').click()
 
 
+    })
 
 })

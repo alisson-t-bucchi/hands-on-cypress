@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "repositório para aprimorar o uso da ferramenta Cypress automatizando site Stickfy",
 
-  
   "scripts": {
     "cy:open": "cypress open",
     "cy:open:mobile": "cypress open --config viewportWidth=410 viewportHeight=860", 
